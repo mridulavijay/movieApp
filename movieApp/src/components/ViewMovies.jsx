@@ -14,7 +14,7 @@ const ViewMovies = () => {
   },[])
   function del_Value(p) {
     axios.delete('http://localhost:4000/removemovie/'+p).then((res)=>{
-      alert('Data deleted');
+      alert('Data not there');
       window.location.reload()
     }).catch((error)=>{
       console.log(error)
