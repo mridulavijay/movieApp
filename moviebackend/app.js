@@ -1,7 +1,7 @@
 const express=require('express');
 const app=new express();
 const cors=require('cors');
-const PORT=4000;
+const PORT=5000;
 const movieModel=require('./model/MovieData');
 require('./connection');
 app.use(express.json());
