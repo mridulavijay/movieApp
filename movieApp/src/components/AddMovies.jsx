@@ -16,14 +16,14 @@ const AddMovies = () => {
   }
   function sendData() {
     if (location.state!=null) {
-      axios.put('http://localhost:4000/movieedit/'+location.state.val._id,form).then((res)=>{
+      axios.put('/api/movieedit/'+location.state.val._id,form).then((res)=>{
         alert('Data updated');
         
       }).catch((error)=>{
         console.log(error);
       })
     } else {
-      axios.post('http://localhost:4000/addMovies',form).then((res)=>{
+      axios.post('/api/addMovies',form).then((res)=>{
         alert('Data added')
       }).catch((error)=>{
         console.log(error)

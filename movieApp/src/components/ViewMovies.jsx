@@ -7,13 +7,13 @@ const ViewMovies = () => {
   const [data,setData]=useState([]);
   var navigate=useNavigate()
   useEffect(()=>{
-    axios.get('http://localhost:4000/movies').then((res)=>{
+    axios.get('/api/movies').then((res)=>{
       console.log(res);
       setData(res.data);
     })
   },[])
   function del_Value(p) {
-    axios.delete('http://localhost:4000/removemovie/'+p).then((res)=>{
+    axios.delete('/api/removemovie/'+p).then((res)=>{
       alert('Data not there');
       window.location.reload()
     }).catch((error)=>{
