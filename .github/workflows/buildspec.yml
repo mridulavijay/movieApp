@@ -1,4 +1,4 @@
-
+version: 0.2
 name: Build React App
 on:
   push:
