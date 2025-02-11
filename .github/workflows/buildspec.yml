@@ -1,48 +1,21 @@
 version: 0.2
 
 run-as: ubuntu
-
-
-
+ on -
+   push:
+     "master"
 proxy:
-  upload-artifacts: no | yes
-  logs: no | yes
+  upload-artifacts: yes
+  logs: yes
 
-
-        
 phases:
-    
+
   build:
-    run-as: ubuntu
-    on-failure: RETRY
     commands:
       - npm run build
    
 artifacts:
   files:
-    - location
-    - location
-  name: artifact-name
-  discard-paths: no | yes
-  base-directory: location
-  exclude-paths: excluded paths
-  enable-symlinks: no | yes
-  s3-prefix: prefix
-  secondary-artifacts:
-    artifactIdentifier:
-      files:
-        - location
-        - location
-      name: secondary-artifact-name
-      discard-paths: no | yes
-      base-directory: location
-    artifactIdentifier:
-      files:
-        - location
-        - location
-      discard-paths: no | yes
-      base-directory: location
-cache:
-  paths:
-    - path
-    - path
+    - target/messageUtil-1.0.jar
+  discard-paths: yes
+
