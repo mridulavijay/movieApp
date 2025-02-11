@@ -11,8 +11,12 @@ proxy:
   logs: yes
 
 phases:
-
-  build:
+   install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - npm install
+   build:
     commands:
       - npm run build
    
