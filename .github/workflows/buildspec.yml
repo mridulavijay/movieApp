@@ -17,7 +17,6 @@ phases:
       - npm install
    build:
     commands:
-      - cd movieApp/
       - npm run build
    
 artifacts:
