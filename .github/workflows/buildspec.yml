@@ -4,8 +4,6 @@ on:
   push:
      branches: [ master ]
 
-run-as: ubuntu
-
 proxy:
   upload-artifacts: yes
   logs: yes
@@ -15,10 +13,10 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-      - sudo npm install
+      - npm install
    build:
     commands:
-      - sudo npm run build
+      - npm run build
    
 artifacts:
   files:
