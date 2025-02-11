@@ -13,9 +13,11 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
+      - cd movieApp/
       - npm install
    build:
     commands:
+      - cd movieApp/
       - npm run build
    
 artifacts:
